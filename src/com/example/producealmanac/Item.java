@@ -22,6 +22,6 @@ public class Item {
 		this.name = name;
 		this.description = (String) infoMap.get(name)[0];
 		this.storage = (String) infoMap.get(name)[1];
-		this.
+		this.picture = (Bitmap) infoMap.get(name)[2];
 	}
 }
