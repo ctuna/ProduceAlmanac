@@ -24,4 +24,15 @@ public class Item {
 		this.storage = (String) infoMap.get(name)[1];
 		this.picture = (Bitmap) infoMap.get(name)[2];
 	}
-}
+	
+	public static void populateMap(){
+		Object[] info = {"apples grow on trees", "counter", null};
+		infoMap.put("apple",info);
+		Object[] info2 = {"potatoes grow in the earth", "counter", null};
+		infoMap.put("potato",info2);
+		Object[] info3 = {"strawberries", "refrigerator", null};
+		infoMap.put("strawberries", info3);
+		
+		}
+		
+	}

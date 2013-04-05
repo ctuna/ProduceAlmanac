@@ -15,7 +15,10 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		currentItems = new ArrayList<Item>()l
+		currentItems = new ArrayList<Item>();
+		currentItems.add(new Item("apple"));
+		//etc etc
+		
 	}
 
 	@Override
