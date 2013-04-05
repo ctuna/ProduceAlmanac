@@ -1,15 +1,21 @@
 package com.example.producealmanac;
 
-import android.os.Bundle;
+import java.util.ArrayList;
+
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
+	
+	ArrayList<Item> currentItems;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		currentItems = new ArrayList<Item>()l
 	}
 
 	@Override
