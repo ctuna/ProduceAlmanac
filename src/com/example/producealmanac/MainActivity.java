@@ -1,7 +1,6 @@
 package com.example.producealmanac;
 
 import java.util.ArrayList;
-
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
