@@ -1,14 +1,17 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+        android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <view class="com.example.producealmanac.CoverFlow" xmlns:coverflow="http://schemas.android.com/apk/res/com.example.producealmanac"
+                coverflow:imageWidth="100dip" coverflow:imageHeight="150dip" android:id="@+id/coverflow" android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="5dip">
+        </view>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+        <com.example.producealmanac.CoverFlow xmlns:coverflow="http://schemas.android.com/apk/res/com.example.producealmanac"
+                coverflow:imageWidth="100dip" coverflow:imageHeight="150dip" coverflow:withReflection="true"
+                coverflow:imageReflectionRatio="0.2" coverflow:reflectionGap="2dip" android:id="@+id/coverflowReflect"
+                android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5dip" />
 
-</RelativeLayout>
+        <TextView android:text="STATUS" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:padding="5dip" android:id="@+id/statusText"></TextView>
+
+</LinearLayout>
