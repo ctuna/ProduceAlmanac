@@ -3,14 +3,18 @@ package com.example.producealmanac;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 	
 	//currentItems will be the items currently in season, use a hashmap with key=time of year
 	ArrayList<Item> currentItems;
 	boolean populated=false;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +30,31 @@ public class MainActivity extends Activity {
 		
 		if(!populated){
 			populated=true;
-			Item.populateMap();
+			populateMap();
 		}
-		
 	}
+	
+	public void populateMap(){
+		
+		Bitmap bitmapple = BitmapFactory.decodeResource(getResources(), R.drawable.apple);
+		ImageView appleView =  new ImageView(this);
+		appleView.setImageBitmap(bitmapple);
+		Object[] info = {"apples grow on trees", "counter", bitmapple };
+		Item.infoMap.put("apple",info);
+		
+		Bitmap bitmapotato = BitmapFactory.decodeResource(getResources(), R.drawable.potato);
+		ImageView potatoView = new ImageView(this);
+		potatoView.setImageBitmap(bitmapotato);		
+		Object[] info2 = {"potatoes grow in the earth", "counter", bitmapotato};
+		Item.infoMap.put("potato",info2);
+		
+		Bitmap bitmapberry = BitmapFactory.decodeResource(getResources(), R.drawable.strawberry);
+		ImageView strawberryView = new ImageView(this);
+		strawberryView.setImageBitmap(bitmapberry);		
+		Object[] info3 = {"strawberries", "refrigerator", bitmapberry};
+		Item.infoMap.put("strawberries", info3);
+	}
+		
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
