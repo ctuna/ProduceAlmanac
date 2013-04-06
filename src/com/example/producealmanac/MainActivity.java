@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 		Bitmap bitmapberry = BitmapFactory.decodeResource(getResources(), R.drawable.strawberry);
 		ImageView strawberryView = new ImageView(this);
 		strawberryView.setImageBitmap(bitmapberry);		
-		Object[] info3 = {"strawberries", "refrigerator", bitmapberry};
+		Object[] info3 = {"strawberries are good", "refrigerator", bitmapberry};
 		Item.infoMap.put("strawberries", info3);
 	}
 		
